@@ -660,6 +660,7 @@ body {
     overflow-y: auto;
     position: relative;
     animation: modalSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-overflow-scrolling: touch;
 }
 
 @keyframes modalSlideIn {
@@ -914,22 +915,226 @@ body {
         right: -100%;
     }
     
+    .modal {
+        padding: 0.5rem;
+    }
+    
     .modal-content {
-        margin: 1rem;
+        margin: 0.5rem;
+        max-height: 95vh;
+    }
+    
+    /* Better Checkout Modal for Mobile */
+    .checkout-modal {
+        padding: 1.5rem;
+    }
+    
+    .checkout-modal h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .checkout-instructions {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .checkout-instructions h3 {
+        font-size: 1rem;
+    }
+    
+    .checkout-instructions ol {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-left: 1.2rem;
+    }
+    
+    .checkout-instructions li {
+        margin-bottom: 0.8rem;
+    }
+    
+    .tiktok-order-btn {
+        padding: 1rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .order-summary {
+        padding: 1rem;
+    }
+    
+    .order-summary h3 {
+        font-size: 1rem;
+    }
+    
+    .summary-items {
+        font-size: 0.9rem;
+        max-height: 150px;
+    }
+    
+    .summary-item {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+    }
+    
+    .summary-row {
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+    }
+    
+    .total-row {
+        font-size: 1.1rem;
+        padding-top: 0.8rem;
+        margin-top: 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
     .products-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .filters {
         flex-direction: column;
         align-items: stretch;
+        gap: 1rem;
     }
     
     .results-count {
         margin-left: 0;
+    }
+    
+    .header-content {
+        padding: 0.8rem 0;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .tagline {
+        font-size: 0.6rem;
+    }
+    
+    /* Even Better Checkout for Small Phones */
+    .checkout-modal {
+        padding: 1rem;
+    }
+    
+    .checkout-modal h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .checkout-instructions {
+        padding: 0.8rem;
+    }
+    
+    .checkout-instructions h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .checkout-instructions ol {
+        font-size: 0.85rem;
+        margin-left: 1rem;
+    }
+    
+    .checkout-instructions li {
+        margin-bottom: 0.6rem;
+    }
+    
+    .tiktok-order-btn {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .tiktok-order-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .order-summary {
+        padding: 0.8rem;
+    }
+    
+    .summary-items {
+        max-height: 120px;
+        font-size: 0.85rem;
+    }
+    
+    .summary-item {
+        font-size: 0.8rem;
+    }
+    
+    /* Make close button easier to tap on mobile */
+    .close-modal {
+        width: 45px;
+        height: 45px;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    /* Better product cards on mobile */
+    .product-image {
+        height: 250px;
+    }
+    
+    .product-info {
+        padding: 1rem;
+    }
+    
+    .product-name {
+        font-size: 1rem;
+    }
+    
+    .product-price {
+        font-size: 1.3rem;
+    }
+}
+
+/* Extra small phones (iPhone SE, etc.) */
+@media (max-width: 360px) {
+    .checkout-modal {
+        padding: 0.8rem;
+    }
+    
+    .checkout-modal h2 {
+        font-size: 1.6rem;
+    }
+    
+    .checkout-instructions h3 {
+        font-size: 0.9rem;
+    }
+    
+    .checkout-instructions ol {
+        font-size: 0.8rem;
+    }
+    
+    .tiktok-order-btn {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+        gap: 0.5rem;
+    }
+    
+    .order-summary h3 {
+        font-size: 0.95rem;
+    }
+    
+    .summary-items {
+        font-size: 0.8rem;
+    }
+    
+    .total-row {
+        font-size: 1rem;
     }
 }
